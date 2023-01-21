@@ -3,7 +3,7 @@ mod profile;
 use profile::{AboutMe, Project};
 
 fn main() {
-    println!("Hello, world!");
+    println!("Hello, World!");
 
     let about_me = AboutMe {
         name: "Chase Lambert",
