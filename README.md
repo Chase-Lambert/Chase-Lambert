@@ -1,14 +1,18 @@
 ```rust
+mod new_job;
 mod profile;
+
+use new_job::{find_new_job, MyNewJob};
 use profile::{AboutMe, Project};
 
-fn main() {
-    println!("Hello, World!");
+#[tokio::main]
+async fn main() -> MyNewJob {
+    println!("Hello, world!");
 
     let about_me = AboutMe {
         name: "Chase Lambert",
 
-        about: "I am a self taught developer who has experience building full stack web apps. \
+        about: "I am a self taught developer who has experience building full stack web apps.   \
                 I have used Javascript with React (and Python with Flask and Django) but mostly \
                 prefer using Clojure(script) and now Rust. \
                 I am currently looking for full or part time work with Rust. \
@@ -19,6 +23,7 @@ fn main() {
             "Rust",
             "Web Development",
             "Clojure(script)",
+            "Python",
             "Javascript",
             "Typescript",
             "React",
@@ -45,7 +50,12 @@ fn main() {
             },
         ],
     };
-    
+
     println!("{about_me:#?}");
+
+    let new_job = find_new_job().await?;
+
+    Ok(new_job)
 }
+// Yes, this code compiles: https://github.com/Chase-Lambert/github_profile
 ```
