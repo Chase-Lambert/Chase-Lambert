@@ -40,7 +40,7 @@ async fn main() -> MyNewJob {
                 url:  "https://lessonplanner.onrender.com/",
                 repo: "https://github.com/Chase-Lambert/lesson_planner",
                 desc: "Full stack Rust app \
-                       Backend uses Axum with a Postrgres db \
+                       Backend uses Axum with a Postgres db \
                        Frontend uses Leptos with Tailwind CSS for styling. \
                        Uses the OpenAI api to help teachers build lesson plans.",
             },
