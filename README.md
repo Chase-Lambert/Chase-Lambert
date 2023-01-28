@@ -36,7 +36,6 @@ async fn main() -> MyNewJob {
         projects: vec![
             Project {
                 name: "lessonplanner.ai",
-                // Repo is currently private. Can allow access upon request.
                 repo: "https://github.com/Chase-Lambert/lesson_planner",
                 desc: "Full stack Rust app \
                        Backend uses Axum with a Postrgres db \
