@@ -36,6 +36,8 @@ async fn main() -> MyNewJob {
         projects: vec![
             Project {
                 name: "lessonplanner.ai",
+                // Currently deployed on free tier so first load may be slow
+                url:  "https://lessonplanner.onrender.com/",
                 repo: "https://github.com/Chase-Lambert/lesson_planner",
                 desc: "Full stack Rust app \
                        Backend uses Axum with a Postrgres db \
@@ -44,8 +46,11 @@ async fn main() -> MyNewJob {
             },
             Project {
                 name: "distance finder",
+                // Currently deployed on free tier so first load may be slow
+                url:  "https://distancefinder.onrender.com/",
                 repo: "https://github.com/Chase-Lambert/distancefinder",
-                desc: "Final project for Harvard's CS50 course.",
+                desc: "Final project for Harvard's CS50 course \
+                       Built using Python with Flask",
             },
         ],
     };
