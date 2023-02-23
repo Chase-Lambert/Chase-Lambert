@@ -38,7 +38,7 @@
   (find-new-job clojure-or-rust-job-offers))
 ```
 
-or if you prefer statically typed languages...
+or if you prefer Rust over Clojure...
 
 ```rust
 mod new_job;
