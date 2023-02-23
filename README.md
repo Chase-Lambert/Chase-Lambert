@@ -1,11 +1,9 @@
 ```clojure
 (ns profile.github
   (:require
-    [profile.cover-letter     :refer [cover-letter]]
-    [profile.resume           :refer [resume]]
+    [profile.app-materials    :refer [cover-letter resume clojure-or-rust-job-offers]]
     [profile.side-effects     :refer [email! update-cover-letter!]]
-    [profile.accomplish-goals :refer [crush-interview! accept-offer!]]
-    [profile.job-offers       :refer [clojure-or-rust-job-offers]]))
+    [profile.accomplish-goals :refer [crush-interview! accept-offer!]]))
 
 (def about-me
   {:name  "Chase Lambert"
