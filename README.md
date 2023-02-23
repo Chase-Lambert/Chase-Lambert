@@ -16,8 +16,19 @@
 (def profile-links
   {:github   "https://github.com/chase-lambert"
    :linkedin "https://www.linkedin.com/in/chase-lambert/"})
+   
+(def projects
+  {:lesson-planner  {:url  "https://lessonplanner.onrender.com/"
+                     :repo "https://github.com/chase-lambert/lesson-planner"
+                     :desc "Full stack Clojure/ClojureScript app that helps teachers
+                            build lesson plans and materials using OpenAI technologies."}
 
-(def profile (merge about-me profile-links))
+   :distance-finder {:url  "https://distancefinder.onrender.com/"
+                     :repo "https://github.com/chase-lambert/distancefinder"
+                     :desc "Final project for Harvard's CS50 course
+                            Built using Python with Flask"}})
+
+(def profile (merge about-me profile-links projects))
 
 (defn send-job-application [profile cover-letter resume job-offer]
   (let [app     (assoc profile :cover-letter cover-letter :resume resume)
@@ -78,7 +89,7 @@ async fn main() -> MyNewJob {
                 name: "distance finder",
                 // Currently deployed on free tier so first load may be slow
                 url:  "https://distancefinder.onrender.com/",
-                repo: "https://github.com/Chase-Lambert/distancefinder",
+                repo: "https://github.com/chase-lambert/distancefinder",
                 desc: "Final project for Harvard's CS50 course \
                        Built using Python with Flask",
             },
