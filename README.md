@@ -79,7 +79,7 @@ async fn main() -> MyNewJob {
             Project {
                 name: "lessonplanner.ai",
                 // Currently deployed on free tier so first load may be slow
-                url:  "https://lessonplanner.onrender.com/",
+                url:  "https://lessonplanner-rust.onrender.com/",
                 repo: "https://github.com/chase-lambert/lesson_planner",
                 desc: "Full stack Rust app \
                        Backend uses Axum with a Postgres db \
