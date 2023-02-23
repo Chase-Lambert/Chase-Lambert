@@ -1,3 +1,47 @@
+```clojure
+(ns profile.github
+  (:require
+    [profile.cover-letter     :refer [cover-letter]]
+    [profile.resume           :refer [resume]]
+    [profile.side-effects     :refer [email! update-cover-letter!]]
+    [profile.accomplish-goals :refer [crush-interview! accept-offer!]]
+    [profile.job-offers       :refer [clojure-or-rust-job-offers]]))
+
+(def about-me
+  {:name  "Chase Lambert"
+   :email "chaselambert@gmail.com"
+   :desc  "I am a self taught developer who has experience building full stack web apps.
+           I am looking for a new role using Clojure/ClojureScript or Rust.
+           I prefer remote but will consider relocation within the US.
+           I have mainly focused on web development but am open to other projects as well"})
+
+(def profile-links
+  {:github   "https://github.com/chase-lambert"
+   :linkedin "https://www.linkedin.com/in/chase-lambert/"})
+
+(def profile (merge about-me profile-links))
+
+(defn send-job-application [profile cover-letter resume job-offer]
+  (let [app     (assoc profile :cover-letter cover-letter :resume resume)
+        contact (:email job-offer)]
+    (email! app contact)))
+
+(defn find-new-job [job-offers]
+  (doseq [{:keys [desc location offer-package] :as offer} job-offers
+          :when (and (= desc "interesting challenge")
+                     (= location :remote-or-enticing-offer-to-relocate)
+                     (= offer-package :exciting))
+          :let [letter (update-cover-letter! cover-letter)]]
+    (send-job-application profile letter resume offer)
+    (crush-interview!)
+    (accept-offer!)))
+
+(comment
+  (find-new-job clojure-or-rust-job-offers))
+```
+
+or if you prefer statically typed languages...
+
 ```rust
 mod new_job;
 mod profile;
@@ -12,11 +56,9 @@ async fn main() -> MyNewJob {
     let about_me = AboutMe {
         name: "Chase Lambert",
 
-        about: "I am a self taught developer who has experience building full stack web apps.   \
-                I have used Javascript with React (and Python with Flask and Django) but mostly \
-                prefer using Clojure(script) and now Rust. \
-                I am currently looking for full or part time work with Rust \
-                I prefer remote but will consider relocation within the US  \
+        about: "I am a self taught developer who has experience building full stack web apps. \
+                I am looking for a new role using Clojure/ClojureScript or Rust. \
+                I prefer remote but will consider relocation within the US. \
                 I have mainly focused on web development but am open to other projects as well",
 
         skills: vec![
@@ -61,5 +103,5 @@ async fn main() -> MyNewJob {
 
     Ok(new_job)
 }
-// Yes, this code compiles: https://github.com/Chase-Lambert/github_profile
+// Yes, this code compiles: https://github.com/chase-lambert/github_profile
 ```
