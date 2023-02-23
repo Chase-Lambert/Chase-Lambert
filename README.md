@@ -15,7 +15,8 @@
 
 (def profile-links
   {:github   "https://github.com/chase-lambert"
-   :linkedin "https://www.linkedin.com/in/chase-lambert/"})
+   :linkedin "https://www.linkedin.com/in/chase-lambert/"}
+   :skills   ["clojure(script)" "rust" "web development" "sql (mostly postgres)" "tailwind"]})
    
 (def projects
   {:lesson-planner  {:url  "https://lessonplanner.onrender.com/"
@@ -70,7 +71,7 @@ async fn main() -> MyNewJob {
                 I prefer remote but will consider relocation within the US. \
                 I have mainly focused on web development but am open to other projects as well",
 
-        skills: vec!["Rust", "Clojure(Script)", "Web Development", "Tailwind CSS"],
+        skills: vec!["rust", "clojure(script)", "web development", "sql (mostly postgres)", "tailwind"],
         
         contact: "chaselambert@gmail.com",
 
