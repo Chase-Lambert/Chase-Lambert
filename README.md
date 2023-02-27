@@ -97,9 +97,7 @@ async fn main() -> MyNewJob {
         ],
     };
 
-    println!("{about_me:#?}");
-
-    let new_job = find_new_job().await?;
+    let new_job = find_new_job(about_me).await?;
 
     Ok(new_job)
 }
