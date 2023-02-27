@@ -2,7 +2,7 @@
 (ns profile.github
   (:require
     [profile.app-materials    :refer [cover-letter resume clojure-or-rust-job-offers]]
-    [profile.side-effects     :refer [email! update-cover-letter!]]
+    [profile.side-effects     :refer [send-email update-cover-letter]]
     [profile.accomplish-goals :refer [crush-interview! accept-offer!]]))
 
 (def about-me
@@ -34,14 +34,14 @@
 (defn send-job-application [profile cover-letter resume job-offer]
   (let [app     (assoc profile :cover-letter cover-letter :resume resume)
         contact (:email job-offer)]
-    (email! app contact)))
+    (send-email app contact)))
 
 (defn find-new-job [job-offers]
   (doseq [{:keys [desc location offer-package] :as offer} job-offers
           :when (and (= desc "interesting challenge")
                      (= location :remote-or-enticing-offer-to-relocate)
                      (= offer-package :exciting))
-          :let [letter (update-cover-letter! cover-letter)]]
+          :let [letter (update-cover-letter cover-letter)]]
     (send-job-application profile letter resume offer)
     (crush-interview!)
     (accept-offer!)))
