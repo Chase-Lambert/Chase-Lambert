@@ -25,7 +25,7 @@ async fn main() -> MyNewJob {
             Project {
                 name: "lessonplanner.ai",
                 // Currently deployed on free tier so first load may be slow
-                url:  "https://lessonplanner-rust.onrender.com/",
+                url:  "https://lessonplanner.onrender.com/",
                 repo: "https://github.com/chase-lambert/lesson_planner",
                 desc: "Full stack Rust app \
                        Backend uses Axum with a Postgres db \
@@ -73,7 +73,7 @@ Or if you prefer the sweet parens of Clojure:
    :skills   ["clojure(script)" "rust" "web development" "sql (mostly postgres)" "tailwind"]})
    
 (def projects
-  {:lesson-planner  {:url  "https://lessonplanner.onrender.com/"
+  {:lesson-planner  {:url  "https://lesson-planner.onrender.com/"
                      :repo "https://github.com/chase-lambert/lesson-planner"
                      :desc "Full stack Clojure/ClojureScript app that helps teachers
                             build lesson plans and materials using OpenAI technologies."}
