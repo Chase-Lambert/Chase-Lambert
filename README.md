@@ -19,7 +19,7 @@
    :skills   ["clojure(script)" "rust" "web development" "sql (mostly postgres)" "tailwind"]})
    
 (def projects
-  {:lesson-planner  {:url  "https://lesson-planner.onrender.com/"
+  {:lesson-planner  {:url  "https://lessonplanner.onrender.com/"
                      :repo "https://github.com/chase-lambert/lesson-planner"
                      :desc "Full stack Clojure/ClojureScript app that helps teachers
                             build lesson plans and materials using OpenAI technologies."}
