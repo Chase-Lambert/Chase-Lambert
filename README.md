@@ -10,6 +10,8 @@
    :email "chaselambert@gmail.com"
    :desc  "I am a self taught developer who has experience building full stack web apps.
            I am looking for a new role using Clojure/ClojureScript.
+           Frontend experience includes: Reagent, Re-Frame, Fulcro, Tailwind
+           Backend: Ring, Reitit, Integrant, Jetty, HugSQL (Postgres)
            I prefer remote but will consider relocation within the US.
            I have mainly focused on web development but am open to other projects as well"})
 
