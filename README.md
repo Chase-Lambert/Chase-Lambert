@@ -24,7 +24,6 @@ async fn main() -> MyNewJob {
         projects: vec![
             Project {
                 name: "lessonplanner.ai",
-                // Currently deployed on free tier so first load may be slow
                 url:  "https://lessonplanner.onrender.com/",
                 repo: "https://github.com/chase-lambert/lesson_planner",
                 desc: "Full stack Rust app \
