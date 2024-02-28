@@ -13,11 +13,11 @@ async fn main() -> MyNewJob {
         name: "Chase Lambert",
 
         about: "I am a self taught developer who has experience building full stack web apps. \
-                I am looking for a new role using Rust or Clojure/ClojureScript. \
+                I am looking for a new role using Rust, Clojure/ClojureScript, or Go. \
                 I prefer remote but will consider relocation within the US. \
                 I have mainly focused on web development but am open to other projects as well",
 
-        skills: vec!["rust", "clojure(script)", "web development", "sql (mostly postgres)", "tailwind"],
+        skills: vec!["rust", "clojure(script)", "go", "web development", "sql (mostly postgres)", "tailwind"],
 
         contact: "chaselambert@gmail.com",
 
