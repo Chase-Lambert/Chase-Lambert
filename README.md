@@ -17,7 +17,7 @@ async fn main() -> MyNewJob {
                 I prefer remote but will consider relocation within the US. \
                 I have mainly focused on web development but am open to other projects as well",
 
-        skills: vec!["rust", "clojure(script)", "go", "web development", "sql (mostly postgres)", "tailwind"],
+        skills: vec!["rust", "clojure(script)", "web development", "sql (mostly postgres)", "tailwind"],
 
         contact: "chaselambert@gmail.com",
 
