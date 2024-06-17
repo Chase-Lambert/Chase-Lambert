@@ -11,7 +11,7 @@
    :desc  "I am a self taught developer who has experience building full stack web apps.
            I am looking for a new role using Clojure/ClojureScript or Rust.
            Frontend experience includes: Reagent, Re-Frame, Fulcro, Tailwind
-           Backend: Ring, Reitit, Integrant, JDBC, HugSQL (Postgres)
+           Backend: Ring, Reitit, Integrant, JDBC, Pathom, Datomic, Postgres
            I prefer remote but will consider relocation within the US.
            I have mainly focused on web development but am open to other projects as well"})
 
