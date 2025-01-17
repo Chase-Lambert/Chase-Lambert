@@ -5,12 +5,6 @@
     [profile.side-effects     :refer [send-email update-cover-letter]]
     [profile.accomplish-goals :refer [crush-interview! accept-offer!]]))
 
-(def about-me(ns profile.github
-  (:require
-   [profile.app-materials    :refer [cover-letter resume clojure-or-rust-job-offers]]
-   [profile.side-effects     :refer [send-email update-cover-letter]]
-   [profile.accomplish-goals :refer [crush-interview! accept-offer!]]))
-
 (def about-me
   {:name  "Chase Lambert"
    :email "chaselambert@gmail.com"
